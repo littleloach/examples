@@ -9,6 +9,18 @@
             class="com.xkland.examples.rcp.minihis.views.PatientView"
             id="com.xkland.examples.rcp.minihis.views.PatientView">
       </view>
+      <view
+            class="com.xkland.examples.rcp.minihis.views.DepartmentDetailView"
+            id="com.xkland.examples.rcp.minihis.views.DepartmentDetailView"
+            name="Department Detail View"
+            restorable="true">
+      </view>
+      <view
+            class="com.xkland.examples.rcp.minihis.views.SelectionView"
+            id="com.xkland.examples.rcp.minihis.views.SelectionView"
+            name="Selection View"
+            restorable="true">
+      </view>
    </extension>
    <extension
          point="org.eclipse.ui.perspectiveExtensions">
@@ -17,8 +29,23 @@
          <view
                ratio="0.5"
                relative="org.eclipse.ui.editorss"
-               relationship="right"
+               relationship="left"
                id="com.xkland.examples.rcp.minihis.views.PatientView">
+         </view>
+         <view
+               id="com.xkland.examples.rcp.minihis.views.DepartmentDetailView"
+               minimized="false"
+               ratio="0.4"
+               relationship="right"
+               relative="com.xkland.examples.rcp.minihis.views.PatientView"
+               visible="true">
+         </view>
+         <view
+               id="com.xkland.examples.rcp.minihis.views.SelectionView"
+               minimized="false"
+               ratio="0.3"
+               relationship="bottom"
+               relative="org.eclipse.ui.editorss">
          </view>
       </perspectiveExtension>
    </extension>

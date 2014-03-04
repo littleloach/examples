@@ -5,12 +5,14 @@ public class Patient {//病人信息，id代表床号
 	private String name;
 	private Gender gender;
 	private int age;
-	public Patient(int id, String name, Gender gender, int age) {
+	private Department department;
+	public Patient(int id, String name, Gender gender, int age, Department department) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.gender = gender;
 		this.age = age;
+		this.department = department;
 	}
 	public int getId() {
 		return id;
@@ -35,6 +37,12 @@ public class Patient {//病人信息，id代表床号
 	}
 	public void setAge(int age) {
 		this.age = age;
+	}
+	public Department getDepartment() {
+		return department;
+	}
+	public void setDepartment(Department department) {
+		this.department = department;
 	}
 
 }

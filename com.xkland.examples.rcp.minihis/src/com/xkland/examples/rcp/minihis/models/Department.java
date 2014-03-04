@@ -20,4 +20,7 @@ public class Department {
 	public List<Patient> getPatients() {
 		return patients;
 	}
+	public void addPatient(Patient patient){
+		patients.add(patient);
+	}
 }

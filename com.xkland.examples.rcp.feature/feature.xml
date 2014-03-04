@@ -18,9 +18,17 @@
    </license>
 
    <plugin
-         id="com.xkland.examples.rcp"
+         id="com.xkland.examples.rcp.base"
          download-size="0"
          install-size="0"
-         version="0.0.0"/>
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.xkland.examples.rcp.minihis"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
 </feature>

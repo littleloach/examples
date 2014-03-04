@@ -37,19 +37,24 @@
          point="org.eclipse.ui.menus">
       <menuContribution
             allPopups="false"
-            locationURI="toolbar:org.eclipse.ui.main.menu">
-         <menu
-               commandId="com.xkland.examples.rcp.minihis.commands.admit"
-               icon="icons/admit_32.png"
-               label="入院"
-               tooltip="入院">
-         </menu>
-         <menu
-               commandId="com.xkland.examples.rcp.minihis.commands.leave"
-               icon="icons/leave_32.png"
-               label="出院"
-               tooltip="入院">
-         </menu>
+            locationURI="toolbar:org.eclipse.ui.main.toolbar">
+         <toolbar
+               id="com.xkland.examples.rcp.minihis.toolbar">
+            <command
+                  commandId="com.xkland.examples.rcp.minihis.commands.admit"
+                  icon="icons/admit_32.png"
+                  label="入院"
+                  style="push"
+                  tooltip="入院">
+            </command>
+            <command
+                  commandId="com.xkland.examples.rcp.minihis.commands.leave"
+                  icon="icons/leave_32.png"
+                  label="出院"
+                  style="push"
+                  tooltip="出院">
+            </command>
+         </toolbar>
       </menuContribution>
    </extension>
 

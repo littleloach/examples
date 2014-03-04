@@ -22,5 +22,35 @@
          </view>
       </perspectiveExtension>
    </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="com.xkland.examples.rcp.minihis.commands.admit"
+            name="入院">
+      </command>
+      <command
+            id="com.xkland.examples.rcp.minihis.commands.leave"
+            name="出院">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.menu">
+         <menu
+               commandId="com.xkland.examples.rcp.minihis.commands.admit"
+               icon="icons/admit_32.png"
+               label="入院"
+               tooltip="入院">
+         </menu>
+         <menu
+               commandId="com.xkland.examples.rcp.minihis.commands.leave"
+               icon="icons/leave_32.png"
+               label="出院"
+               tooltip="入院">
+         </menu>
+      </menuContribution>
+   </extension>
 
 </plugin>

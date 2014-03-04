@@ -12,14 +12,12 @@
       <view
             class="com.xkland.examples.rcp.minihis.views.DepartmentDetailView"
             id="com.xkland.examples.rcp.minihis.views.DepartmentDetailView"
-            name="Department Detail View"
-            restorable="true">
+            name="Department Detail View">
       </view>
       <view
             class="com.xkland.examples.rcp.minihis.views.SelectionView"
             id="com.xkland.examples.rcp.minihis.views.SelectionView"
-            name="Selection View"
-            restorable="true">
+            name="Selection View">
       </view>
    </extension>
    <extension
@@ -27,25 +25,26 @@
       <perspectiveExtension
             targetID="*">
          <view
-               ratio="0.5"
-               relative="org.eclipse.ui.editorss"
+               id="com.xkland.examples.rcp.minihis.views.PatientView"
+               ratio="0.3"
                relationship="left"
-               id="com.xkland.examples.rcp.minihis.views.PatientView">
+               relative="org.eclipse.ui.editorss"
+               visible="true">
          </view>
          <view
                id="com.xkland.examples.rcp.minihis.views.DepartmentDetailView"
                minimized="false"
-               ratio="0.4"
+               ratio="0.5"
                relationship="right"
-               relative="com.xkland.examples.rcp.minihis.views.PatientView"
+               relative="org.eclipse.ui.editorss"
                visible="true">
          </view>
          <view
                id="com.xkland.examples.rcp.minihis.views.SelectionView"
                minimized="false"
-               ratio="0.3"
-               relationship="bottom"
-               relative="org.eclipse.ui.editorss">
+               ratio="0.7"
+               relationship="right"
+               relative="com.xkland.examples.rcp.minihis.views.DepartmentDetailView">
          </view>
       </perspectiveExtension>
    </extension>

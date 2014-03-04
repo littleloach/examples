@@ -7,6 +7,10 @@ import org.eclipse.ui.part.ViewPart;
 
 public class SelectionView extends ViewPart {
 	private ListViewer selectionList;
+	public ListViewer getSelectionList() {
+		return selectionList;
+	}
+
 	@Override
 	public void createPartControl(Composite parent) {
 		selectionList = new ListViewer(parent, SWT.BORDER | SWT.V_SCROLL);

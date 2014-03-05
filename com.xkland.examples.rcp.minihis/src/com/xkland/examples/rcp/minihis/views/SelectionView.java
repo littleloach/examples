@@ -22,6 +22,8 @@ public class SelectionView extends ViewPart implements ISelectionListener {
 	public void createPartControl(Composite parent) {
 		selectionList = new ListViewer(parent, SWT.BORDER | SWT.V_SCROLL);
 		getSite().getWorkbenchWindow().getSelectionService().addSelectionListener(this);
+		selectionList.setContentProvider(new SelectionContentProvider());
+		selectionList.setLabelProvider(new SelectionLabelProvider());
 	}
 
 	@Override
@@ -32,8 +34,6 @@ public class SelectionView extends ViewPart implements ISelectionListener {
 
 	@Override
 	public void selectionChanged(IWorkbenchPart part, ISelection selection) {
-		selectionList.setContentProvider(new SelectionContentProvider());
-		selectionList.setLabelProvider(new SelectionLabelProvider());
 		selectionList.setInput(selection);
 	}
 

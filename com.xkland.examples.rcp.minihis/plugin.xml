@@ -51,10 +51,12 @@
    <extension
          point="org.eclipse.ui.commands">
       <command
+            defaultHandler="com.xkland.examples.rcp.minihis.handlers.DefaultHandler"
             id="com.xkland.examples.rcp.minihis.commands.admit"
             name="入院">
       </command>
       <command
+            defaultHandler="com.xkland.examples.rcp.minihis.handlers.DefaultHandler"
             id="com.xkland.examples.rcp.minihis.commands.leave"
             name="出院">
       </command>
@@ -72,6 +74,14 @@
                   label="入院"
                   style="push"
                   tooltip="入院">
+                  <visibleWhen>
+						    <with variable="selection">
+						        <count value="1"/>
+						        <iterate ifEmpty="false">
+						            <instanceof value="com.xkland.examples.rcp.minihis.models.Department"/>
+						        </iterate>
+						    </with>
+						</visibleWhen>
             </command>
             <command
                   commandId="com.xkland.examples.rcp.minihis.commands.leave"
@@ -79,6 +89,14 @@
                   label="出院"
                   style="push"
                   tooltip="出院">
+                  <visibleWhen>
+						    <with variable="selection">
+						        <count value="1"/>
+						        <iterate ifEmpty="false">
+						            <instanceof value="com.xkland.examples.rcp.minihis.models.Patient"/>
+						        </iterate>
+						    </with>
+						</visibleWhen>
             </command>
          </toolbar>
       </menuContribution>

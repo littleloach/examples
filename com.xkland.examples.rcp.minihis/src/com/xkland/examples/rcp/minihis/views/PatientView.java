@@ -17,7 +17,7 @@ public class PatientView extends ViewPart {
 	Inpatient inpatient = new Inpatient();
 	@Override
 	public void createPartControl(Composite parent) {
-		patientViewer = new TreeViewer(parent,SWT.BORDER | SWT.V_SCROLL);
+		patientViewer = new TreeViewer(parent,SWT.BORDER | SWT.V_SCROLL | SWT.MULTI);
 		//创建一点点初始化数据，以便测试用
 		Department surgery = inpatient.getDepartments()[1];
 		surgery.addPatient(new Patient(1,"赵某某",Gender.MALE,28,surgery));
@@ -29,6 +29,8 @@ public class PatientView extends ViewPart {
 		patientViewer.setLabelProvider(new PatientLabelProvider());
 		//设置input
 		patientViewer.setInput(inpatient);
+		
+		this.getSite().setSelectionProvider(patientViewer);
 	}
 
 	@Override
